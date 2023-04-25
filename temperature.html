@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
 
     <title>Final Project</title>
@@ -22,46 +22,46 @@
     <!--Top navigation-->
     <div class="topnav" id="myTopnav">
         <a href="/index.html" ">Last Values</a>
-        <a href="/html/humidity.html">Humidity</a>
-        <a href="/html/temperature.html">Temperature</a>
-        <a href="/html/windspeed.html">Wind Speed</a>
+        <a href="/humidity.html">Humidity</a>
+        <a href="/temperature.html">Temperature</a>
+        <a href="/windspeed.html">Wind Speed</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
             </a>
     </div>
 
 <!--Dropdown selector for time span-->
-    <div class="dropdown">
-        <label for="timespan-select">Select a Time Span:</label>
-        <select id="timespan-select">
-            <option value="20">Latest 20 readings</option>
-            <option value="24">24 hours</option>
-            <option value="48">48 hours</option>
-            <option value="72">72 hours</option>
-            <option value="1week">1 week</option>
-            <option value="1month">1 month</option>
-        </select>
-    </div>
-        
+<div class="dropdown">
+    <label for="timespan-select">Select a Time Span:</label>
+    <select id="timespan-select">
+        <option value="20">Latest 20 readings</option>
+        <option value="24">24 hours</option>
+        <option value="48">48 hours</option>
+        <option value="72">72 hours</option>
+        <option value="1week">1 week</option>
+        <option value="1month">1 month</option>
+    </select>
+</div>
+    
 <!--Show table data-->
-    <div class="card">
-    <table id="windspeed-table"></table>
-    </div>
-    
+<div class="card">
+<table id="temperature-table"></table>
+</div>
+
 <!--Show chart data-->
-    <div class="card">
-        <h1>Wind Speed Chart</h1>
-        <canvas id="windspeed-chart"></canvas>
-    </div>
-    
+<div class="card">
+    <h1>Temperature Chart</h1>
+    <canvas id="temperature-chart"></canvas>
+</div>
+
 <!--Show statistics-->
-    <div class="card">
-        <h1>Statistics</h1>
-        <div id="statistics-container">
-    </div>
+<div class="card">
+    <h1>Statistics</h1>
+    <div id="statistics-container"></div>
+</div>
 
 <!--Collect data from script and statistics file-->
-<script src="/javascript/statistics.js"></script>
-<script src="/javascript/windspeed.js"></script>
+<script src="/statistics.js"></script>
+<script src="/temperature.js"></script>
 </body>
 </html>
