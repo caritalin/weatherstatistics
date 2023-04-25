@@ -13,7 +13,7 @@
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     background: #222;
-    background-image: url('/frontend/css/images/iceland.jpg');
+    background-image: url('/css/images/iceland.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
