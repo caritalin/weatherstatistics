@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/frontend/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+    <title>Final Project</title>
+</head>
+<body>
+
+    <!--Header-->
+    <header>
+        <div class="gutter" id="flex">
+            <h1>Weather Page</h1>
+        </div>
+    </header>
+
+    <!--Top navigation-->
+    <div class="topnav" id="myTopnav">
+        <a href="/frontend/html/lastvalues.html" ">Last Values</a>
+        <a href="/frontend/html/humidity.html">Humidity</a>
+        <a href="/frontend/html/temperature.html">Temperature</a>
+        <a href="/frontend/html/windspeed.html">Wind Speed</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+    </div>
+
+<!--Dropdown selector for measurement-->
+    <div class="dropdown">
+        <label for="measurementSelect">Select Measurement:</label>
+        <select id="measurementSelect" onchange="fetchData()">
+            <option value="temperature">Temperature</option>
+            <option value="wind_direction">Wind Direction</option>
+            <option value="rain">Rain</option>
+            <option value="wind_speed">Wind Speed</option>
+            <option value="humidity_in">Humidity In</option>
+            <option value="humidity_out">Humidity Out</option>
+            <option value="light">Light</option>
+        </select>
+        
+<!--Dropdown selector for time span-->
+        <label for="timeSpanSelect">Select a Time Span:</label>
+        <select id="timeSpanSelect" onchange="fetchData()">
+            <option value="20">Latest 20 readings</option>
+            <option value="24">24 hours</option>
+            <option value="48">48 hours</option>
+            <option value="72">72 hours</option>
+            <option value="168">Last week</option>
+            <option value="720">Last month</option>
+        </select>
+    </div>
+    <br>
+
+<!--Show table data-->
+    <div class="card">
+	<table id="data-table">
+		<thead>
+			<tr>
+				<th>Date Time</th>
+				<th id="measurement-header"></th>
+			</tr>
+		</thead>
+		<tbody id="data-body">
+		</tbody>
+	</table>
+</div>
+
+<!--Show chart data-->
+<div class="card">
+    <h1>Measurement Chart</h1>
+    <canvas id="chart"></canvas>
+</div>
+
+<!--Collect data from script and statistics file-->
+<script src="/frontend/javascript/statistics.js"></script>
+<script src="/frontend/javascript/lastvalues.js"></script>
+    
+</body>
+</html>
