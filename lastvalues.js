@@ -20,7 +20,7 @@ function fetchData() {
   const table = document.getElementById('data-table');
   const measurement = measurementSelect.value;
   const timeSpan = timeSpanSelect.value;
-  const url = `http://webapi19sa-1.course.tamk.cloud/v1/weather/${measurement}/${timeSpan}`;
+  const url = `https://webapi19sa-1.course.tamk.cloud/v1/weather/${measurement}/${timeSpan}`;
 
 
   // Fetching data according to users selections of measurement and time span

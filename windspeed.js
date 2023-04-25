@@ -15,25 +15,25 @@ let chart;
 function fetchAndDisplayData(timespan) {
   switch (timespan) {
     case '20':
-      url = `http://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/20`;
+      url = `https://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/20`;
       break;
     case '24':
-      url = `http://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/24`;
+      url = `https://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/24`;
       break;
     case '48':
-      url = `http://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/48`;
+      url = `https://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/48`;
       break;
     case '72':
-      url = `http://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/72`;
+      url = `https://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/72`;
       break;
     case '1week':
-      url = `http://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/1week`;
+      url = `https://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/1week`;
       break;
     case '1month':
-      url = `http://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/1month`;
+      url = `https://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/1month`;
       break;
     default:
-      url = `http://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/24`;
+      url = `https://webapi19sa-1.course.tamk.cloud/v1/weather/wind_speed/24`;
   }
 
 
